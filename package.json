@@ -1,0 +1,40 @@
+{
+  "name": "api-template-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Marcos Olavo Silva Buganeme <marcos.after@gmail.com> (https://marcosbuganeme.com.br/)",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "sucrase ./src -d ./dist --transforms typescript,imports",
+    "pre-prod": "rimraf dist && sucrase ./src -d ./dist --transforms typescript,imports",
+    "dev": "nodemon src/server.ts"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "date-fns": "^2.14.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.3",
+    "http-status": "^1.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.3",
+    "morgan": "^1.9.1",
+    "oracledb": "^4.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/compression": "^1.7.0",
+    "@types/cors": "^2.8.6",
+    "@types/helmet": "^0.0.45",
+    "@types/mongoose": "^5.7.3",
+    "@types/morgan": "^1.9.0",
+    "@types/oracledb": "^4.2.1",
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1",
+    "typescript": "^3.8.3"
+  }
+}
