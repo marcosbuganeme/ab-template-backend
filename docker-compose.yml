@@ -1,0 +1,17 @@
+version: "3.6"
+networks:
+  api:
+    driver: bridge
+
+services:
+  gateway-financeiro:
+    container_name: api-template-backend
+    build: .
+    volumes:
+      - .:/home/node
+    working_dir: /home/node
+    command: sh ./start.sh
+    ports:
+      - 4444:4444
+    networks:
+      - api
