@@ -1,3 +1,12 @@
-# ab-template-backend
+# Atividades
 
-## Template do backend da empresa anbetec 
+### Criar um microserviço para listar todos os clientes do banco de dados oracle por filtro
+* Por código
+* Por nome
+
+* GET /clientes
+
+
+### Criar um microserviço para exportar toda a base de cliente existente no banco de dados oracle e exportar para banco de dados oracle
+
+GET /clientes/exportar
