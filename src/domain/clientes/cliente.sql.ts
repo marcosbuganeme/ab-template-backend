@@ -1,5 +1,4 @@
 class ClienteSql {
-
   porFiltro = (codigo: number, nome: string) => {
     return `
       SELECT 
@@ -14,9 +13,9 @@ class ClienteSql {
       WHERE
         C.CODCLI = ${codigo}
       OR
-        UPPER(C.CLIENTE) LIKE UPPER('%${nome}%')
-    `
-  }
+        UPPER(C.CLIENTE) LIKE UPPER('${nome}%')
+    `;
+  };
 }
 
-export default new ClienteSql()
+export default new ClienteSql();
