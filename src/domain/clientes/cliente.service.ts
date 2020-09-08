@@ -6,7 +6,7 @@ import { Util, UtilOracle } from '../../components';
 import { ClienteSql, Cliente } from './';
 
 class ClienteService {
-  pesquisarPorCodigo = async (codigo: number, nome: string) => {
+  pesquisarCliente = async (codigo: number, nome: string) => {
     let connection: OracleDB.Connection = null;
     return await Oracle.conectar()
       .then((poolConexaoOracle) => (connection = poolConexaoOracle))
@@ -27,8 +27,22 @@ class ClienteService {
   }
 
   private transformarResultado = (columns: any): Cliente => {
-    const { CODIGO, CLIENTE } = columns;
-    return { codigo: CODIGO, cliente: CLIENTE };
+    const {
+      CODCLI,
+      CLIENTE,
+      ENDERCOB,
+      BAIRROCOB,
+      FANTASIA,
+      DTCADASTRO,
+    } = columns;
+    return {
+      codcli: CODCLI,
+      cliente: CLIENTE,
+      endercob: ENDERCOB,
+      bairrocob: BAIRROCOB,
+      fantasia: FANTASIA,
+      dtCadastro: DTCADASTRO,
+    };
   };
 }
 

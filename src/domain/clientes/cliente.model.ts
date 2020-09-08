@@ -1,8 +1,8 @@
 export interface Cliente {
-  codigo: string;
+  codcli: string;
   cliente: string;
-  endereco?: string;
-  bairro?: string;
-  fatansia?: string;
-  dataCadastro?: Date;
+  endercob?: string;
+  bairrocob?: string;
+  fantasia?: string;
+  dtCadastro?: Date;
 }

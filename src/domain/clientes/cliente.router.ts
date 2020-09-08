@@ -4,6 +4,6 @@ import ClienteController from './cliente.controller';
 
 const ClienteRouter = Router();
 
-ClienteRouter.route('/:codigo').get(ClienteController.pesquisarPorCodigo);
+ClienteRouter.route('/').get(ClienteController.pesquisarCliente);
 
 export default ClienteRouter;
