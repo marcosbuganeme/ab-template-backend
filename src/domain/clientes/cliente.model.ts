@@ -4,5 +4,5 @@ export interface Cliente {
   endercob?: string;
   bairrocob?: string;
   fantasia?: string;
-  dtCadastro?: Date;
+  dtCadastro: Date;
 }
