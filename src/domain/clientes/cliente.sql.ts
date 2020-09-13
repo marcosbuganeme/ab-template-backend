@@ -17,5 +17,13 @@ class ClienteSql {
     `;
   };
 }
+/**
+ * dessa forma irá pesquisar se em algum campo da tabela possui o nome informado
+   UPPER(C.CLIENTE) LIKE UPPER('%${nome}%')
+ * 
+
+   UPPER(C.CLIENTE) LIKE UPPER('%${nome}%')
+   Já dessa forma, só irá mostrar os campos que começam com o nome informado
+ */
 
 export default new ClienteSql();

@@ -3,7 +3,7 @@ import OracleDB from 'oracledb';
 import { Oracle } from '../../infra';
 import { Util, UtilOracle } from '../../components';
 
-import { ClienteSql, Cliente } from './';
+import { Cliente, ClienteSql, ClienteSchema } from './';
 
 class ClienteService {
   pesquisarCliente = async (codigo: number, nome: string) => {
