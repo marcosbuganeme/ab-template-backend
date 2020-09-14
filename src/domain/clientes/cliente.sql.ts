@@ -1,4 +1,19 @@
 class ClienteSql {
+
+  todos = () => {
+    return `
+    SELECT 
+      C.CODCLI, 
+      C.CLIENTE,
+      C.ENDERCOB,
+      C.BAIRROCOB,
+      C.FANTASIA,
+      C.DTCADASTRO
+    FROM 
+      PCCLIENT C
+  `
+  }
+
   porFiltro = (codigo: number, nome: string) => {
     return `
       SELECT 
