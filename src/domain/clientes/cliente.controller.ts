@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { Cliente, ClienteService } from '.';
+import { ClienteService } from '.';
 
 class ClienteController {
   async pesquisarCliente(req: Request, res: Response) {
